@@ -1,0 +1,195 @@
+.slider {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    &:after {
+        content: "";
+        width: 700px;
+        height: 90px;
+        background: url(/images/shadow.png) no-repeat center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        margin-top: 200px;
+        z-index: 1;
+    }
+    &[data-active="1"] {
+        .slides {
+            transform: translateX(0);
+        }
+        .mockup {
+            img {
+                left: 0;
+            }
+        }
+        .thumbs {
+            button {
+                &[data-no="1"] {
+                    border: 1px solid var(--blackcolor);
+                }
+            }
+        }
+    }
+    &[data-active="2"] {
+        .slides {
+            transform: translateX(-100%);
+        }
+        .mockup {
+            img {
+                left: -251px;
+            }
+        }
+        .thumbs {
+            button {
+                &[data-no="2"] {
+                    border: 1px solid var(--blackcolor);
+                }
+            }
+        }
+    }
+    &[data-active="3"] {
+        .slides {
+            transform: translateX(-200%);
+        }
+        .mockup {
+            img {
+                left: -502px;
+            }
+        }
+        .thumbs {
+            button {
+                &[data-no="3"] {
+                    border: 1px solid var(--blackcolor);
+                }
+            }
+        }
+    }
+    &[data-active="4"] {
+        .slides {
+            transform: translateX(-300%);
+        }
+        .mockup {
+            img {
+                left: -753px;
+            }
+        }
+        .thumbs {
+            button {
+                &[data-no="4"] {
+                    border: 1px solid var(--blackcolor);
+                }
+            }
+        }
+    }
+    .mockup {
+        width: 250px;
+        height: 506px;
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-mask-image: url(/images/mockup.png);
+        mask-image: url(/images/mockup.png);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: url(/images/water.png) no-repeat center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: unset;
+            transition: left 0.5s;
+            z-index: 0;
+        }
+    }
+    .slides {
+        height: 100%;
+        width: 100%;
+        box-sizing: content-box;
+        display: flex;
+        flex-wrap: nowrap;
+        transition: all 0.5s;
+        pointer-events: none;
+        z-index: 1;
+        .slide {
+            flex: 0 0 100%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            font-size: 25vw;
+            position: relative;
+            letter-spacing: 10px;
+            &.fruit1 {
+                background: var(--color1);
+            }
+            &.fruit2 {
+                background: var(--color2);
+            }
+            &.fruit3 {
+                background: var(--color3);
+            }
+            &.fruit4 {
+                background: var(--color4);
+            }
+        }
+    }
+
+    .thumbs {
+        position: absolute;
+        z-index: 3;
+        right: 0;
+        bottom: 0;
+        border-radius: 5px;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 0 30px 30px;
+        background-image: linear-gradient(to top, rgba(255, 255, 255, 0.5), transparent);
+        button {
+            width: 32px;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 699px) {
+    .slider {
+        .slides {
+            .slide {
+                letter-spacing: 0;
+            }
+        }
+        .thumbs {
+            padding: 0 20px 20px;
+        }
+    }
+}

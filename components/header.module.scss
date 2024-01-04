@@ -1,0 +1,42 @@
+.header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    .logo {
+        font-size: 36px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: #fff;
+        pointer-events: none;
+    }
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            column-gap: 30px;
+            font-weight: 500;
+            li {
+                a {
+                    color: --blackcolor;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 699px) {
+    .header {
+        padding: 20px;
+        nav {
+            ul {
+                column-gap: 20px;
+            }
+        }
+    }
+}
