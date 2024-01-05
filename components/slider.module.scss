@@ -12,7 +12,7 @@
         content: "";
         width: 700px;
         height: 90px;
-        background: url(/images/shadow.png) no-repeat center;
+        background: url(../images/shadow.png) no-repeat center;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -96,15 +96,15 @@
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        -webkit-mask-image: url(/images/mockup.png);
-        mask-image: url(/images/mockup.png);
+        -webkit-mask-image: url(../images/mockup.png);
+        mask-image: url(../images/mockup.png);
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         &:before {
             content: "";
             width: 100%;
             height: 100%;
-            background: url(/images/water.png) no-repeat center;
+            background: url(../images/water.png) no-repeat center;
             position: absolute;
             left: 0;
             top: 0;

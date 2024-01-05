@@ -18,6 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_URL}/favicon.ico`} sizes="any" />
+            </head>
             <body>
                 <main className={fontFamily.className}>
                     {children}

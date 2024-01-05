@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
-const isProd = true;
 
 const nextConfig = {
     output: 'export',
-    assetPrefix: isProd ? '/slider' : undefined,
+    basePath: process.env.NEXT_PUBLIC_BASE_URL,
     trailingSlash: false,
     reactStrictMode: true,
     images: {

@@ -6,16 +6,19 @@ import styles from "./slider.module.scss";
 
 function Slider() {
     const [active, setActive] = useState("1");
+
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ? process.env.NEXT_PUBLIC_BASE_URL : '';
+
     return (
         <div className={styles.slider} data-active={active}>
             <div className={styles.mockup}>
-                <Image src="/images/fruits.png" alt="Fruits" width={1004} height={506} unoptimized />
+                <Image src={`${baseUrl}/images/fruits.png`} alt="Fruits" width={1004} height={506} unoptimized />
             </div>
             <div className={styles.slides}>
-                <div className={`${styles.fruit1} ${styles.slide} `}>Karpuz</div>
-                <div className={`${styles.fruit2} ${styles.slide} `}>Limon</div>
-                <div className={`${styles.fruit3} ${styles.slide} `}>Çilek</div>
-                <div className={`${styles.fruit4} ${styles.slide} `}>Muz</div>
+                <div className={`${styles.fruit1} ${styles.slide}`}>Karpuz</div>
+                <div className={`${styles.fruit2} ${styles.slide}`}>Limon</div>
+                <div className={`${styles.fruit3} ${styles.slide}`}>Çilek</div>
+                <div className={`${styles.fruit4} ${styles.slide}`}>Muz</div>
             </div>
             <div className={styles.thumbs}>
                 <button onClick={() => setActive("1")} data-no="1">1</button>

@@ -1,5 +1,5 @@
 # Demo
-https://nextjs-slider.ozhanmengucek.com
+https://nextjs.ozhanmengucek.com/slider
 
 ## Getting Started
 
